@@ -37,7 +37,8 @@ class Reg (Frame):
                         msg['Text']), 'filehelper')
         # 回复给好友
             apikey = self.apikey.get()
-            url = "http://www.tuling123.com/openapi/api?key=39df371b491d4099870bb56b3aebc277&info="
+            api_key = ""
+	        url = "http://www.tuling123.com/openapi/api?key=" + api_key + "&info="
             url = url + msg['Text']
             html = getHtmlText(url)
             message = re.findall(r'\"text\"\:\".*?\"',html)
